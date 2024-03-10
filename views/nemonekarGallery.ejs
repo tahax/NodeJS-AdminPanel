@@ -1,0 +1,43 @@
+<%- include("./includes/header.ejs") -%>
+<div class="container">
+  <h4 class="text-center pb-5"><%= pageTitle%></h4>
+  <a
+    href="http://localhost:3000/nemonekar-image-upload"
+    target="_blank"
+    style="text-decoration: none"
+  >
+    <div class="ws-add-blog-box">
+      <i class="fa fa-plus fa-2x"></i>
+    </div>
+  </a>
+  <div class="row">
+    <div class="ws-div-blog">
+      <% images.forEach(function(img){ %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="ws-blog-box">
+          <div class="ws-div-image">
+            <img class="ws-blog-box-img" src="<%= img %>" alt="" />
+          </div>
+          <div class="w-100 d-flex justify-content-between">
+            <a
+              onclick="copyFunction(this)"
+              class="btn w-50 btn-outline-primary btn-virayesh"
+              >کپی</a
+            >
+            <p class="d-none"><%= img %></p>
+            <a
+              href="./delete-post/"
+              class="btn w-50 btn-outline-danger btn-hazf"
+              >حذف</a
+            >
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+<%- include("./includes/pagenation.ejs") -%>
+<script src="../../js/copy.js"></script>
+<script src="../js/copy.js"></script>
+<%- include("./includes/footer.ejs") -%>

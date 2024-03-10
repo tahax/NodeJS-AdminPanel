@@ -1,0 +1,51 @@
+<%- include("./includes/header.ejs") -%>
+<div class="container py-5">
+  <h4 class="text-center pb-5"><%= pageTitle%></h4>
+  <div class="input-group ws-upload mb-3">
+    <div class="input-group-prepend">
+      <button
+        class="btn btn-sm btn-outline-secondary"
+        type="button"
+        id="imageUpload"
+      >
+        آپلود عکس
+      </button>
+    </div>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="selectedImage" />
+      <label
+        id="imageStatus"
+        class="custom-file-label text-center"
+        for="selectedImage"
+      >
+        عکس مورد نظر را انتخاب کنید
+      </label>
+    </div>
+  </div>
+
+  <div id="progressDiv" style="display: none">
+    <div class="progress">
+      <div
+        id="progressBar"
+        class="progress-bar progress-var-striped progress-bar-animated"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+    </div>
+  </div>
+
+  <div class="w-100 text-center">
+    <p
+      onclick="copyFunction(this)"
+      id="uploadsResult"
+      class="rounded ws-cursor overflow-auto ws-color-nine py-2"
+    >
+      آدرس عکس آپلود شده
+    </p>
+  </div>
+</div>
+<script src="../js/uploadnemonekar.js"></script>
+<script src="../../js/uploadnemonekar.js"></script>
+<script src="../../js/copy.js"></script>
+<script src="../js/copy.js"></script>
+<%- include("./includes/footer.ejs") -%>

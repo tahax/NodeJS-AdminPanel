@@ -1,0 +1,49 @@
+<%- include("./includes/header.ejs") -%>
+<div class="all">
+  <div class="container">
+    <a href="/addnemonekar" style="text-decoration: none">
+      <div class="ws-add-blog-box">
+        <i class="fa fa-plus fa-2x"></i>
+      </div>
+    </a>
+    <div class="row">
+      <div class="ws-div-blog">
+        <% if (nemonekarha.length > 0){ %> <% for( let nemonekar of nemonekarha)
+        { %>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="ws-blog-box">
+            <div class="ws-div-image">
+              <img
+                class="ws-blog-box-img"
+                src="<%= nemonekar.deskImage%>"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex justify-content-between">
+              <a
+                href="./edit-nemonekar/<%= nemonekar._id %>"
+                class="btn w-50 btn-outline-primary btn-virayesh"
+                >ویرایش</a
+              >
+              <a
+                href="./delete-nemonekar/<%= nemonekar._id %>"
+                class="btn w-50 btn-outline-danger btn-hazf"
+                >حذف</a
+              >
+            </div>
+            <h3 class="ws-blog-box-date">
+              <%= formatDate(nemonekar.createdAt) %>
+            </h3>
+          </div>
+        </div>
+        <% } %> <% } else{%>
+        <div class="text-center">
+          <h3 class="mt-2">هیچ نمونه کاری توسط شما ثبت نشده</h3>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <%- include("./includes/pagenation.ejs") -%>
+</div>
+<%- include("./includes/footer.ejs") -%>

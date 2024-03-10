@@ -1,0 +1,62 @@
+<%- include("./includes/header.ejs") -%>
+<div class="ws-addblog-body container">
+  <h3 class="mt-2 pb-5 text-center iranyekanbold">ویرایش پست </h3>
+  <div class="col-12 col-md-6 col-lg-6 mx-auto text-right">
+    <%- include("./includes/messages.ejs")%>
+  </div>
+  <form action="./<%= post._id %>" class="ws-form-addblog" method="POST">
+    <div class="d-flex flex-column align-items-start pb-4">
+      <label class="iranyekanbold" for="title">عکس پست</label>
+      <input
+        type="text"
+        class="form-control col-12 col-md-6 col-lg-6"
+        name="image"
+        id="image"
+        value="<%= post.image %>"
+      />
+    </div>
+
+    <div class="d-flex flex-column align-items-start pb-4">
+      <label class="iranyekanbold" for="title">عنوان پست</label>
+      <input
+        type="text"
+        class="form-control col-12 col-md-6 col-lg-6"
+        name="title"
+        id="title"
+        value="<%= post.title %>"
+      />
+    </div>
+
+    <div class="d-flex flex-column align-items-start pb-5">
+      <label class="iranyekanbold" for="status">انتشار</label>
+      <select
+        name="status"
+        class="form-control col-6 col-md-6 col-lg-4"
+        id="status"
+      >
+      <option value="<%= post.status %>" selected><%= post.status === "public" ? "عمومی" : "خصوصی" %></option>
+      <option value="<%= post.status === "public" ? "private" : "public" %>"><%= post.status === "public" ? "خصوصی" : "عمومی" %></option>
+      </select>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-start pb-5">
+      <!-- Button gallery -->
+      <a href="http://localhost:3000/postgallery" target="_blank" class="rounded btn btn-secondary col-12 col-md-auto"> آلبوم عکس ها </a>
+    </div>
+
+    <div class="form-group">
+      <h5 class="text-right iranyekanbold mb-3">متن اصلی پست</h5>
+      <textarea name="body" class="form-control" id="body"><%= post.body %></textarea>
+    </div>
+
+    <div class="d-flex">
+      <input type="submit" value="ساخت پست" class="btn btn-primary m-2" />
+      <a href="/adminpanel" class="btn btn-outline-danger m-2">انصراف</a>
+    </div>
+  </form>
+</div>
+<script src="../js/upload.js"></script>
+<script src="../../js/upload.js"></script>
+<script src="../../js/copy.js"></script>
+<script src="../js/copy.js"></script>
+<%- include("./includes/footer.ejs") -%>

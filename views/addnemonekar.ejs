@@ -1,0 +1,50 @@
+<%- include("./includes/header.ejs") -%>
+<div class="ws-addblog-body container">
+  <h3 class="mt-2 pb-5 text-center iranyekanbold">ساخت نمونه کار جدید</h3>
+  <div class="col-12 col-md-6 col-lg-6 mx-auto text-right">
+    <%- include("./includes/messages.ejs")%>
+  </div>
+    <!-- Button trigger modal -->
+    <div class="d-flex align-items-center justify-content-start pb-5">
+      <!-- Button trigger modal -->
+      <a
+        href="http://localhost:3000/nemonekargallery"
+        target="_blank"
+        class="btn btn-secondary col-12 col-md-auto"
+      >
+        آلبوم عکس ها
+      </a>
+    </div>
+
+    <div class="w-100 d-flex flex-column align-items-center pb-5">
+      <label class="iranyekanbold text-right" for="title">عکس دسکتاپ وب سایت</label>
+      <input
+        type="text"
+        class="form-control col-12 col-md-6 col-lg-6"
+        name="deskImage"
+        id="image"
+      />
+    </div>
+
+    <div class="w-100 d-flex flex-column align-items-center pb-5">
+      <label class="iranyekanbold" for="title">عکس ریسپانسیو وب سایت</label>
+      <input
+        type="text"
+        class="form-control col-12 col-md-6 col-lg-6"
+        name="phoneImage"
+        id="image"
+      />
+    </div>
+
+    <div class="row">
+      <input type="submit" value="ساخت نمونه کار" class="btn btn-primary m-2" />
+      <a href="/adminpanel" class="btn btn-outline-danger m-2">انصراف</a>
+    </div>
+  </form>
+</div>
+<script src="../js/uploadnemonekar.js"></script>
+<script src="../../js/uploadnemonekar.js"></script>
+<script src="../../js/copy.js"></script>
+<script src="../js/copy.js"></script>
+
+<%- include("./includes/footer.ejs") -%>

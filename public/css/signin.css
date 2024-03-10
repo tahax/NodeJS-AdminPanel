@@ -1,0 +1,139 @@
+@font-face {
+  font-family: iranyekanbold;
+  src: url("../fonts/492984b8.woff");
+}
+
+@font-face {
+  font-family: light;
+  src: url("../fonts/a80f71ff.woff2");
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: light;
+  direction: rtl;
+}
+
+.ws-sigin-body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ws-login-video-wallpaper {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.ws-filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(20, 20, 20, 0.25);
+  box-shadow: 0 4px 10px -5px rgb(0 0 0);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border: 1 px solid rgba(10, 10, 10, 0.18);
+}
+
+@media only screen and (max-width: 800px) {
+  .ws-login-video-wallpaper {
+    width: auto;
+    height: 100%;
+    position: absolute;
+  }
+}
+.iranyekanbold {
+  font-family: "iranyekanbold";
+}
+
+.light {
+  font-family: "light";
+}
+
+.ws-btn-vorod {
+  width: 100%;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 20px;
+  margin: 0 auto;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(20, 20, 20, 0.25);
+  box-shadow: 0 4px 10px -5px rgb(0 0 0);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border: 1 px solid rgba(10, 10, 10, 0.18);
+  border-radius:10px;
+  color: #fff;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  background-color: transparent;
+  z-index: 2;
+  outline: none;
+}
+
+.form-signin .form-control:valid {
+  background-color: transparent;
+  outline: none;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.ws-signin-input::placeholder {
+  color: #ccc;
+}
+
+.ws-signin-input {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background-color: transparent;
+  outline: none;
+}
+
+.ws-signin-input:focus {
+  background-color: transparent;
+  z-index: 2;
+  outline: none;
+}
+
+.ws-signin-input:valid {
+  background-color: transparent;
+  outline: none;
+}
+.ws-remember-me {
+  color: #ccc;
+}

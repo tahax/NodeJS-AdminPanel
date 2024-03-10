@@ -1,0 +1,134 @@
+<%- include("./includes/header.ejs") -%>
+<div
+  class="
+    container-fluid
+    d-flex
+    align-items-center
+    justify-content-center
+    flex-column
+  "
+>
+  <div class="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center">
+    <div class="image-parent-profile rounded-circle overflow-hidden mb-3">
+      <img
+        src="<%= userImageProfile %> "
+        alt=""
+        class="user-image-profile"
+        id="uploadedimagetag"
+      />
+    </div>
+    <div class="input-group ws-upload mb-3">
+      <div class="input-group-prepend">
+        <button
+          class="btn btn-sm btn-outline-secondary"
+          type="button"
+          id="imageUpload"
+        >
+          آپلود عکس
+        </button>
+      </div>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="selectedImage" />
+        <label
+          id="imageStatus"
+          class="custom-file-label text-center"
+          for="selectedImage"
+        >
+          عکس مورد نظر را انتخاب کنید
+        </label>
+      </div>
+    </div>
+
+    <div id="progressDiv" style="display: none">
+      <div class="progress">
+        <div
+          id="progressBar"
+          class="progress-bar progress-var-striped progress-bar-animated"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+    <form
+      class="form-signin d-flex flex-column align-items-start w-100"
+      action="/editusername"
+      method="POST"
+    >
+      <div class="input-group mb-3 ws-dr-ltr">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" type="submit">ذخیره</button>
+        </div>
+        <input
+          type="text"
+          id="inputEmail"
+          class="form-control ws-signin-input text-right"
+          name="fullName"
+          placeholder="نام کاربری"
+          required
+          autofocus
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <!-- <div class="col-lg-6 col-md-12 col-12">
+        <div class="row d-flex">
+          <input
+            type="text"
+            id="inputEmail"
+            class="form-control ws-signin-input mb-3"
+            name="fullName"
+            placeholder="نام کاربری"
+            required
+            autofocus
+          />
+          <button
+            class="btn btn-lg btn-primary btn-block ws-btn-vorod iranyekanbold"
+            type="submit"
+          >
+            ذخیره
+          </button>
+        </div>
+      </div> -->
+    </form>
+    <form
+      class="form-signin d-flex flex-column align-items-start w-100"
+      action="/editpassword"
+      method="POST"
+    >
+      <div class="input-group mb-3 ws-dr-ltr">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" type="submit">ذخیره</button>
+        </div>
+        <input
+          type="password"
+          id="inputPassword"
+          class="form-control ws-signin-input text-right"
+          placeholder="رمز عبور"
+          name="password"
+          required
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <!-- <div class="col-lg-6 col-md-12 col-12">
+        <div class="row d-flex">
+          <input
+            type="password"
+            id="inputPassword"
+            class="form-control ws-signin-input mb-3"
+            placeholder="رمز عبور"
+            name="password"
+            required
+          />
+          <button
+            class="btn btn-lg btn-primary btn-block ws-btn-vorod iranyekanbold"
+            type="submit"
+          >
+            ذخیره
+          </button>
+        </div>
+      </div> -->
+    </form>
+  </div>
+</div>
+<script src="../js/uploadprofileimage.js"></script>
+<script src="../../js/uploadprofileimage.js"></script>
+<%- include("./includes/footer.ejs") -%>

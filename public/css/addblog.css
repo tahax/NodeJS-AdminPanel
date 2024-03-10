@@ -1,0 +1,18 @@
+.ws-addblog-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.ws-form-addblog {
+  width: 100%;
+}
+
+.ws-upload {
+  direction: ltr;
+  direction: column;
+}
+.ws-color-nine {
+  color: #888;
+  background-color: #333;
+}

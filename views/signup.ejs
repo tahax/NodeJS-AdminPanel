@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico" />
+
+    <title>Signin Template for Bootstrap</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/sign-in/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="./css/signin.css" rel="stylesheet" />
+  </head>
+
+  <body class="text-center rtl overflow-hidden">
+    <video class="ws-login-video-wallpaper" loop autoplay muted>
+      <source src="./videos/large.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <!-- //video background -->
+    <div class="ws-filter"></div>
+    <form class="form-signin" action="/signup" method="POST">
+      <img
+        class="mb-4"
+        src="./images/logo.png"
+        alt=""
+        width="90"
+        height="auto"
+      />
+      <h1 class="h3 mb-4 font-weight-normal iranyekanbold">ثبت نام</h1>
+      <%- include("./includes/messages.ejs") %>
+      <input
+        type="text"
+        id="inputEmail"
+        class="form-control ws-signin-input"
+        name="fullName"
+        placeholder="نام کاربری"
+        required
+        autofocus
+      />
+      <input
+        type="email"
+        id="inputEmail"
+        class="form-control ws-signin-input"
+        placeholder="ایمیل"
+        name="email"
+        required
+        autofocus
+      />
+      <input
+        type="password"
+        id="inputPassword"
+        class="form-control ws-signin-input"
+        placeholder="رمز عبور"
+        name="password"
+        required
+      />
+      <button
+        class="btn btn-lg btn-primary btn-block ws-btn-vorod iranyekanbold"
+        type="submit"
+      >
+        ثبت نام
+      </button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<%- include("./includes/header.ejs") -%>
+<div class="all">
+  <div class="container">
+    <a href="/addBlog" style="text-decoration: none;">
+      <div class="ws-add-blog-box">
+        <i class="fa fa-plus fa-2x "></i>
+      </div>
+    </a>
+    <div class="row">
+      <div class="ws-div-blog">
+        <% if (blogs.length > 0){ %> <% for( let blog of blogs) { %>
+        <div class="col-12 col-md-6 col-lg-3">
+          
+            <div class="ws-blog-box">
+              <div class="ws-div-image">
+                <img
+                class="ws-blog-box-img"
+                src="<%= blog.image%>"
+                alt=""
+              />
+              </div>
+              <h3 class="badge ws-badge <%= blog.status === "public" ? "badge-success" : "badge-warning" %>">
+                <%= blog.status === "public" ? "عمومی" : "خصوصی" %>  
+              </h3>
+              <h3 class="ws-blog-box-title"><%= blog.title%></h3>
+              <div class="w-100 d-flex justify-content-between">
+                <a href="./edit-post/<%= blog._id %>" class="btn w-50 btn-outline-primary btn-virayesh">ویرایش</a>
+                <a href="./delete-post/<%= blog._id %>" class="btn w-50 btn-outline-danger btn-hazf">حذف</a>
+              </div>
+              <h3 class="ws-blog-box-date"><%= formatDate(blog.createdAt) %></h3>
+            </div>
+          
+        </div>
+        
+        <% } %> <% } else{%>
+        <div class="text-center">
+          <h3 class="mt-2">هیچ پستی توسط شما ثبت نشده</h3>
+        </div>
+        <% } %>
+      </div>
+      
+    </div>
+  </div>
+  <%- include("./includes/pagenation.ejs") -%>
+</div>
+<%- include("./includes/footer.ejs") -%>

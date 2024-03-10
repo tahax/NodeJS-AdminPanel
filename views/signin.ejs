@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico" />
+
+    <title>Signin Template for Bootstrap</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/sign-in/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="./css/signin.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="ws-sigin-body">
+      <!-- video background -->
+      <video class="ws-login-video-wallpaper" loop autoplay muted>
+        <source src="./videos/large.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <!-- //video background -->
+      <div class="ws-filter"></div>
+      <form class="form-signin" action="/signinpanel" method="POST">
+        <img
+          class="mb-3"
+          src="./images/logo.png"
+          alt=""
+          width="90"
+          height="auto"
+        />
+        <h1 class="h3 mb-4 font-weight-normal iranyekanbold">
+          ورود به پنل مدیریت
+        </h1>
+        <%- include("./includes/loginmsg.ejs") -%>
+        <input
+          type="email"
+          name="email"
+          id="inputEmail"
+          class="form-control ws-signin-input"
+          placeholder="نام کاربری"
+          required
+          autofocus
+        />
+        <input
+          type="password"
+          name="password"
+          id="inputPassword"
+          class="form-control ws-signin-input"
+          placeholder="رمز عبور"
+          required
+        />
+        <div class="w-100 ws-remember-me d-flex checkbox mb-2">
+          <label>
+            <input type="checkbox" name="remember" value="remember-me" /> مرا به
+            خاطر بسپار
+          </label>
+        </div>
+        <button
+          class="btn btn-lg btn-primary btn-block ws-btn-vorod light"
+          type="submit"
+        >
+          ورود
+        </button>
+      </form>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
